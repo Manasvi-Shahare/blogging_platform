@@ -26,6 +26,7 @@ This project implements a RESTful API for a simple blogging platform using Flask
 
 3. **Initialize the database:**
    ```bash
+   export FLASK_APP=run.py
    flask db init
    flask db migrate -m "Initial migration"
    flask db upgrade
@@ -120,7 +121,7 @@ All API endpoints are relative to:
 curl http://127.0.0.1:5000
 ```
 
-### Example cURL Commands
+### Example CURL Commands
 1. Signup:
    ```bash
    curl -X POST http://127.0.0.1:5000/signup -H "Content-Type: application/json" -d '{"username": "testuser", "password": "testpassword"}'
