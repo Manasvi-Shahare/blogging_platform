@@ -4,6 +4,10 @@ from . import auth
 
 bp = Blueprint('routes', __name__)
 
+@bp.route('/')
+def index():
+    return jsonify(message="Welcome to the Simple Blogging Platform!"), 200
+
 @bp.route('/posts', methods=['POST'])
 @auth.login_required
 def create_post():
